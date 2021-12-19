@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dltag="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.TagEntryView"
+             mc:Ignorable="d"
+             x:Class="RecipeApp.Views.NewRecipe">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Mentés"
+                     Clicked="NewRecipeSaveClicked" />
+        <ToolbarItem Text="Vissza"
+                     Clicked="NewRecipeBackClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,35,10,10">
+            
+                <Label Text="Recept"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold" />
+            
+                <Entry x:Name="RecipeName"
+                       Text="{Binding RecipeName}"
+                       Placeholder="Recept neve"/>
+
+                <Entry x:Name="Tags"
+                       Text="{Binding Tags}"
+                       Placeholder="Cimkék" />
+
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="CookingTimeHours"
+                       Text="{Binding CookingTimeHours}"
+                       Placeholder="Elkészítési idő - óra" Keyboard="Numeric"/>
+
+                    <Entry x:Name="CookingTimeMinutes"
+                       Text="{Binding CookingTimeMinutes}"
+                       Placeholder="Elkészítési idő - perc" Keyboard="Numeric"/>
+
+                </StackLayout>
+            
+
+                <Entry x:Name="Persons"
+                       Text="{Binding Persons}"
+                       Placeholder="Hány főre" Keyboard="Numeric"/>
+
+                <Editor x:Name="Ingredients"
+                       Text="{Binding Ingredients}"
+                       Placeholder="Hozzávalók"
+                        AutoSize="TextChanges"/>
+
+                <Editor x:Name="Description"
+                        Text="{Binding Description}"
+                        Placeholder="Elkészítés"
+                        AutoSize="TextChanges"/>
+
+                <Entry x:Name="Link"
+                       Text="{Binding Link}"
+                       Placeholder="Link az eredeti recepthez" />
+
+                <Label x:Name="ErrorMessage"
+                       Text="Közelező mezők: Recept neve, Hozzávalók, Elkészítés"
+                       TextColor="Red"
+                       FontAttributes="Bold"
+                       IsVisible="False"/>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

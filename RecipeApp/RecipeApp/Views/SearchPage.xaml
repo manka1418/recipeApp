@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Keresés"
+             x:Class="RecipeApp.Views.SearchPage">
+    
+    <StackLayout Margin="10,35,10,10">
+
+        <!--<Label Text="Keresés"
+            HorizontalOptions="Center"
+            FontAttributes="Bold" />-->
+
+        <!--<Entry x:Name="RecipeNameSB"
+               Placeholder="Recept neve" TextChanged="OnTextChanged" />
+
+        <Entry x:Name="TagSB"
+               Placeholder="Cimke" TextChanged="OnTextChanged" />
+
+        <Entry x:Name="IngredientSB"
+               Placeholder="Hozzávalók" TextChanged="OnTextChanged" />-->
+
+        <SearchBar Placeholder="Recept neve"
+                       x:Name="RecipeNameSB"
+                       TextChanged="OnTextChanged"
+                       CancelButtonColor="Blue"
+                       PlaceholderColor="Gray"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Medium"
+                       FontAttributes="Italic" />
+
+        <SearchBar Placeholder="Cimke"
+                    x:Name="TagSB"
+                    TextChanged="OnTextChanged"
+                    CancelButtonColor="Blue"
+                    PlaceholderColor="Gray"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Medium"
+                    FontAttributes="Italic" />
+
+        <SearchBar Placeholder="Hozzávalók"
+                    x:Name="IngredientSB"
+                    TextChanged="OnTextChanged"
+                    CancelButtonColor="Blue"
+                    PlaceholderColor="Gray"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Medium"
+                    FontAttributes="Italic" />
+
+        <Label x:Name="NoSearchResultLabel" 
+               Text="Nincs eredménye a keresésnek." 
+               IsVisible="False"
+               FontSize="16"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <ListView x:Name="SearchResultsList"
+                  VerticalOptions="FillAndExpand"
+                  HasUnevenRows="true"
+                  ItemSelected="OnItemSelected">
+            <d:ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Retkedik Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Forth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <!-- Ide kerül egy konkrét listaelem kinézete -->
+
+                        <!-- d:Text="Valami" - ez itt a tervezőben megjelenő placeholder -->
+                        <StackLayout Padding="10" Orientation="Vertical">
+                            <!-- <Image Source="Image" /> -->
+                            <Label Text="{Binding RecipeName}" 
+                                d:Text="{Binding .}"
+                                FontSize="16"
+                                FontAttributes="Bold"
+                                TextColor="Black" />
+
+                            <Label Text="{Binding ListDetails}"
+                                d:Text="{Binding .}"
+                                FontSize="14"
+                                TextColor="Black" />
+
+                        </StackLayout>
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        
+
+    </StackLayout>
+    
+    
+    
+</ContentPage>

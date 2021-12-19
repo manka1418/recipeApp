@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Menu"
+             x:Class="RecipeApp.Views.MenuPage">
+
+
+    <ListView x:Name="RecipeMenuList"
+              HasUnevenRows="True"
+              ItemSelected="MenuItemClicked">
+
+        <!-- Placeholder a kinézethez, ezt látni itt a tervezőnézetben
+                (ez felülíródik a menuItems elemeivel) -->
+        <d:ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Item 1</x:String>
+                <x:String>Item 2</x:String>
+            </x:Array>
+        </d:ListView.ItemsSource>
+        <!-- Placeholder vége -->
+
+        <!-- ListView.ItemTemplate és a DataTemplate és a Viewcell kötelező hármas -->
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <!-- Ide kerül egy konkrét listaelem kinézete -->
+
+                    <Grid Padding="15">
+                        <Label Text="{Binding .}" d:Text="{Binding .}" FontSize="20"/>
+                    </Grid>
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+
+
+</ContentPage>

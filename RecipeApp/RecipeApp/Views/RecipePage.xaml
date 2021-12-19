@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Receptek"
+             x:Class="RecipeApp.Views.RecipePage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Új recept"
+                     Clicked="OnRecipeAddedClicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ListView x:Name="RecipeList"
+              HasUnevenRows="true"
+              CachingStrategy="RecycleElement"
+              ItemSelected="OnItemSelected">
+
+        <d:ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Retkedik Item</x:String>
+                <x:String>Second Item</x:String>
+                <x:String>Third Item</x:String>
+                <x:String>Forth Item</x:String>
+                <x:String>Fifth Item</x:String>
+                <x:String>Sixth Item</x:String>
+            </x:Array>
+        </d:ListView.ItemsSource>
+
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <!-- Ide kerül egy konkrét listaelem kinézete -->
+                    
+                    <!-- d:Text="Valami" - ez itt a tervezőben megjelenő placeholder -->
+                    <StackLayout Padding="10" Orientation="Vertical">
+                        <!-- <Image Source="Image" /> -->
+                        <Label Text="{Binding RecipeName}" 
+                               d:Text="{Binding .}"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="Black" />
+
+                        <Label Text="{Binding ListDetails}"
+                               d:Text="{Binding .}"
+                               FontSize="14"
+                               TextColor="Black" />
+                        
+                    </StackLayout>
+
+
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
+    
+
+    
+</ContentPage>

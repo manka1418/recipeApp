@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RecipeApp.Views.Recipe">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Töröl"
+                     Clicked="DeleteRecipeClicked" />
+        <ToolbarItem Text="Szerkesztés"
+                     Clicked="EditingRecipeClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10,35,10,10">
+
+                <Label Text="Recept"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   FontSize="18"/>
+
+
+                <Label Text="Recept neve"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+
+                <Label x:Name="RecipeName"
+                       Text="{Binding RecipeName}"
+                       FontSize="16"
+                       />
+            
+            
+                <Label Text="Recept cimkéje"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+            
+                <Label x:Name="Tags"
+                       Text="{Binding Tags}"
+                       FontSize="16"
+                       />
+
+                <Label Text="Elkészítési idő"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+            
+                <Label x:Name="CookingTime"
+                       Text="{Binding ListDetails}"
+                       FontSize="16"
+                   />
+
+            
+                <Label Text="Fő"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+            
+                <Label x:Name="Persons"
+                       Text="{Binding Persons}"
+                       FontSize="16"
+                   />
+
+
+                <Label Text="Hozzávalók"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+            
+                <Label x:Name="Ingredients"
+                       Text="{Binding Ingredients}"
+                       FontSize="16"
+                     />
+
+
+                <Label Text="Elkészítés"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+            
+                <Label x:Name="Description"
+                       Text="{Binding Description}"
+                       FontSize="16"
+                     />
+
+
+                <Label Text="Link az eredeti recepthez"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       Margin="0, 20, 0, 0"/>
+
+                <Label x:Name="Link"
+                     Text="{Binding Link}"
+                     TextColor="DeepSkyBlue"
+                     FontSize="16"
+                     />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

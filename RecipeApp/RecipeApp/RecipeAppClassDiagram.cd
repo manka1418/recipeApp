@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RecipeApp.Views.InfoPage" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\InfoPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Models.MRecipe" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAQgAgQAAAAAAAAOQAAAAAAEIAAAAAQAEAAAA=</HashCode>
+      <FileName>Models\MRecipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Views.MenuPage">
+    <Position X="5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Views\MenuPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Views.NewRecipe" Collapsed="true">
+    <Position X="0.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Views\NewRecipe.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.App" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAgAEAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Views.StarterPage" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEAAAAAAAAAAAAAAoAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Views\StarterPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Views.RecipePage" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABEAgAAEAAAAIAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Views\RecipePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Views.Recipe" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAggABAAAAQAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Views\Recipe.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecipeApp.Views.SearchPage" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAABEA=</HashCode>
+      <FileName>Views\SearchPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
